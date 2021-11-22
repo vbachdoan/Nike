@@ -1,0 +1,24 @@
+@import '../../../roots.scss';
+
+#wrap-on-app{
+    margin: var(--page-margin);
+    #wrap-title{
+        p{
+            font-size: var(--size-title-sub);
+            color: #757575;
+            text-align: center;
+            margin-bottom: 4px;
+        }
+        h3{
+            font-size: var(--size-title-mega);
+            font-weight: 400;
+            text-align: center;
+        }
+    }
+    #on-app-content{
+        display: grid;
+        grid-template-columns:  minmax(0, 1fr)  minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+        gap: 12px;
+        margin-top: 84px;
+    }
+}

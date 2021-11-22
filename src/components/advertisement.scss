@@ -1,0 +1,46 @@
+@keyframes transitionWord {
+    0%{
+        left: 0%;
+    }
+    40%{
+        left: 0%;
+    }
+    50%{
+        left: -100%
+    }
+    90%{
+        left: -100%;
+    }
+    100%{
+        left: 0%;
+    }
+}
+
+#wrap-advertisement{
+    position: relative;
+    background-color: #f5f5f5;
+    height: 60px;
+    width: 100%;
+    overflow: hidden;
+    #advertisement{
+        position: absolute;
+        height: 100%;
+        width: 200%;
+        display: flex;
+        align-items: center;
+        animation: transitionWord 8s ease-in-out infinite;
+        div{
+            width: 50%;
+            p{
+                font-size: 16px;
+                text-align: center;
+            }
+            a{
+                display: block;
+                font-size: 12px;
+                color:#000;
+                text-align: center;
+            }
+        }
+    }
+}

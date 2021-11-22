@@ -1,0 +1,24 @@
+@import '../roots.scss';
+
+    .image{
+        img{
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    .information{
+        margin-top: 36px;
+        p{
+            font-size: var(--size-title-sub);
+            margin-bottom: 4px;
+        }
+        h3{
+            font-weight: 400;
+            font-size: var(--size-title-big);
+            margin-bottom: 26px;
+        }
+        a{
+            font-size: var(--size-title-sub);
+            color: #000;
+        }
+    }

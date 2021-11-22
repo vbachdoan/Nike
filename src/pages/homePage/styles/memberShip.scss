@@ -1,0 +1,35 @@
+@import '../../../roots.scss';
+
+#wrap-member-ship{
+    margin: var(--page-margin);
+    #member-ship-title{
+        height: 60px;
+        font-size: var(--size-title-big);
+        font-weight: 400;
+    }
+    #member-ship-content{
+        text-align: center;
+        #title{
+            font-size: 32px;
+            font-weight: 400;
+            margin-bottom: 24px;
+        }
+        #btn>a{
+            height: 24px;
+            font-size: 16px;
+            padding: 8px 28px;
+            margin-top: 18px;
+            border-radius: 26px;
+            background-color: #000;
+            text-decoration: none;
+            color:#fff;
+            display: inline-block;
+            &:hover{
+                background-color: #00000075;
+            }
+        }
+        #paragraph{
+            font-size: 20px;
+        }
+    }
+}

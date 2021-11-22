@@ -1,0 +1,36 @@
+@import '../../../roots.scss';
+
+#contact{
+    width: 100%;
+    display: grid;
+    grid-template-columns:  minmax(0, 1fr)  minmax(0, 1fr) minmax(0, 1fr);
+    row-gap: 42px;
+    margin-bottom: var(--page-margin);
+    margin-top: 42px;
+    div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img{
+            width: 64px;
+            height: 64px;
+            object-fit: cover;
+            margin-bottom: 36px;
+        }
+        h3{
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 1.5;
+        }
+        a{
+            font-size: var(--size-title-sub);
+            text-decoration: none;
+            color: #000;
+            line-height: 1.5;
+            transition: .2s ease-in-out;
+            &:hover{
+                color: #ccc;
+            }
+        }
+    }
+}

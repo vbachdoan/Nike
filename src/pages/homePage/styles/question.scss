@@ -1,0 +1,64 @@
+.wrap-question-box{
+    input{
+        display: none;
+        &:checked ~ label{
+            height: 130px;
+            &::after{
+                opacity: 1;
+            }
+            svg{
+                transform: rotate(180deg);
+            }
+        }
+    }
+    label{
+        display: block;
+        height: 94px;
+        transition: .3s ease-in-out;
+        position: relative;
+        font-size: 18px;
+        &::after{
+            position: absolute;
+            bottom: 20px;
+            left: 0px;
+            width: 100%;
+            opacity: 0;
+            transition: .3s ease-in-out;
+            transition-delay: .1s;
+        }
+        svg{
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            transition: .3s ease-in-out;
+        }
+    }
+    &:nth-child(1){
+        label{
+            &::after{
+                content: 'Nike Membership gives you access to inspiration, community, and exclusive Nike products. It’s the best way to access everything Nike and it’s free, fast, and easy to join. You can join online or when you download any of the Nike apps.';
+            }
+        }
+    }
+    &:nth-child(2){
+        label{
+            &::after{
+                content: "Yes, Nike Membership is free. That includes our fitness apps, Nike Training Club and Nike Run Club, and their libraries of over 100+ workouts, and the SNKRS app, to stay on top of the latest sneakers drops.";
+            }
+        }
+    }
+    &:nth-child(3){
+        label{
+            &::after{
+                content: "Join Us with three simple clicks, and you’ll be ready to shop, work out, and enjoy all of our benefits.";
+            }
+        }
+    }
+    &:nth-child(4){
+        label{
+            &::after{
+                content: "All Nike Members receive special offers and product promotions just to say thanks for being with us, or for moments of personal significance like birthdays. Nike Member Rewards is not a points-based system, so you’ll receive rewards throughout the year.";
+            }
+        }
+    }
+}

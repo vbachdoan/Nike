@@ -1,0 +1,92 @@
+@import '../roots.scss';
+
+
+#wrap-footer{
+    padding: var(--page-margin);
+    padding-bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    background-color: #111;
+    a{
+        text-decoration: none;
+    }
+    #navigation{
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #ccc7;
+        padding-bottom:  24px;
+        #links{
+            display: flex;
+            justify-content: space-between;
+            width: 50%;
+            div{
+                display: flex;
+                flex-direction: column;
+                &:nth-child(2) a,
+                &:nth-child(3) a{
+                    line-height: 1.5;
+                    color: #ccc;
+                    transition: .1s ease-in-out;
+                    &:hover{
+                        color:#fff;
+                    }
+                }
+            }
+        }
+        #icons{
+            svg{
+                fill: #ccc7;
+                margin-left: 16px;
+                transition: .1s ease-in-out;
+                &:hover{
+                    fill: #fff;
+                }
+            }
+        }
+    }
+    #policy{
+        height: 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 12px;
+        p,a{
+            color: #ccc;
+            transition: .2s ease-in-out;
+        }
+        #copyright{
+            display: flex;
+            #location{
+                margin-right: 24px;
+                display: flex;
+                svg{
+                    fill: #fff;
+                    margin-right: 16px;
+                }
+                p{
+                    color: #fff;
+                }
+            }
+        }
+        #other-links{
+            display: flex;
+            div{
+                margin-left: 24px;
+                transition: .1s ease-in-out;
+                a{
+                    &:hover{
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.important{
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 28px;
+}

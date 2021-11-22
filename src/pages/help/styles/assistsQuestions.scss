@@ -1,0 +1,27 @@
+@import '../../../roots.scss';
+
+#wrap-assists{
+    margin: var(--page-margin);
+    margin-bottom: 0px;
+    border: 0.5px solid #ccc;
+    #assists-questions{
+        margin: var(--page-margin);
+    }
+}
+#wrap-contact{
+    margin: var(--page-margin) var(--page-margin) 0px var(--page-margin);
+}
+.wrap-title{
+    .title{
+        font-size: var(--size-title-mega);
+        font-weight: 400;
+        line-height: 1.5;
+    }
+    .sub-title{
+        font-size: var(--size-title-sub);
+        line-height: 1.5;
+        padding-bottom: 16px;
+    }
+    margin-bottom: 20px;
+    border-bottom: 0.5px solid #ccc;
+}

@@ -1,0 +1,28 @@
+@import '../../../roots.scss';
+
+#wrap-questions{
+    display: grid;
+    grid-template-columns:  minmax(0, 1fr)  minmax(0, 1fr) minmax(0, 1fr);
+    row-gap: 42px;
+    margin-bottom: 84px;
+    div{
+        display: flex;
+        flex-direction: column;
+        h3{
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 1.5;
+        }
+        a{
+            font-size: var(--size-title-sub);
+            text-decoration: none;
+            color: #000;
+            letter-spacing: -0.15px;
+            line-height: 1.5;
+            transition: .2s ease-in-out;
+            &:hover{
+                color: #ccc;
+            }
+        }
+    }
+}

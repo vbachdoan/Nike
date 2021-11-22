@@ -1,0 +1,61 @@
+@import '../../../roots.scss';
+
+#wrap-title-and-search{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 42px;
+    h3{
+        font-size: var(--size-title-mega);
+        margin-bottom: 12px;
+        font-weight: 400;
+        text-align: center;
+    }
+    #search-box{
+        position: relative;
+        width: 480px;
+        height: 56px;
+        border-radius: 7px;
+        border: 0.5px solid #ccc;
+        input{
+            border: 0px;
+            height: 100%;
+            width: calc( 100% - 30px);
+            margin-left: 20px;
+            margin-right: 10px;
+            font-size: 16px;
+            &:focus{
+                outline: none;
+                & ~ label>p{
+                    top: -5px;
+                    font-size: 13px;
+                }
+            }
+        }
+        svg{
+            position: absolute;
+            right: 0px;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 12px;
+        }
+        label>p{
+            position: absolute;
+            top: 50%;
+            left: 20px;
+            transform: translateY(-50%);
+            transition: .3s ease-in-out;
+            padding: 3px 3px;
+            &::after{
+                content: '';
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                background-color: #fff;
+                z-index: -1;
+            }
+        }
+    }
+}

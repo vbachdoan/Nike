@@ -1,0 +1,16 @@
+@import '../../../roots.scss';
+
+#wrap-faqs{
+    margin: var(--page-margin);
+    margin-bottom: 84px;
+    #faqs-title{
+        font-size: var(--size-title-big);
+    }
+    #faqs-question{
+        margin-top: 36px;
+        .wrap-question-box{
+            margin-bottom: 30px;
+            border-bottom: 1px solid #ccc;
+        }
+    }
+}

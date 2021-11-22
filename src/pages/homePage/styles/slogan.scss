@@ -1,0 +1,32 @@
+@import '../../../roots.scss';
+
+#wrap-slogan{
+    margin: var(--page-margin);
+    #slogan-background{
+        position: relative;
+        width: 100%;
+        img{
+            width: inherit;
+        }
+        #slogan-btn{
+            position: absolute;
+            bottom: 36px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            a{
+                height: 24px;
+                font-size: 16px;
+                padding: 8px 28px;
+                margin-top: 18px;
+                border-radius: 26px;
+                background-color: #000;
+                text-decoration: none;
+                color:#fff;
+                display: inline-block;
+                &:hover{
+                    background-color: #00000075;
+                }
+            }
+        }
+    }
+}
