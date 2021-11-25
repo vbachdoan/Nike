@@ -37,7 +37,7 @@ export default class MainNavigation extends React.Component{
     render(){
         return(
             <>
-                <div  id="homepage-nav-main">
+                <div id="homepage-nav-main">
                     <div id="link-left">
                         <a href="https://www.nike.com/jordan">
                             <svg height="24px" width="24px" fill="#111" viewBox="0 0 26 32">

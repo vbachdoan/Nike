@@ -1,12 +1,70 @@
 import React from "react";
+import Gifts from "./navigationShieldComponents/gifts";
+import Kids from "./navigationShieldComponents/kids";
+import Men from "./navigationShieldComponents/men";
+import NewReleases from "./navigationShieldComponents/newReleases";
+import Sale from "./navigationShieldComponents/sale";
+import Women from "./navigationShieldComponents/women";
 
 import './productsBar.scss';
 
 export default class ProductsBar extends React.Component{
+
+    constructor(props){
+        super(props);
+        this.state = {
+            open: false,
+            own: "",
+            display: {
+                "z-index": "-1"
+            }
+        }
+        this.handleClose=this.handleClose.bind(this);
+        this.mouseLeave=this.mouseLeave.bind(this);
+    }
+
+    mouseLeave(){
+        this.setState({
+            open: false,
+            own: "",
+            backgroundStyle: {
+                backgroundColor: "#0000"
+            },
+            display: {
+                "z-index": "-1"
+            }
+        });
+    }
+
+    handleClose(){
+        this.setState({
+            open: false,
+            own: "",
+            backgroundStyle: {
+                backgroundColor: "#0000"
+            },
+            display: {
+                "z-index": "-1"
+            }
+        });
+    }
+    handleOpen(own){
+        this.setState({
+            open: true,
+            own: own,
+            backgroundStyle: {
+                backgroundColor: "#00000075",
+            },
+            display:{
+                "z-index": "20"
+            }
+        })
+    }
+
     render(){
         return(
             <>
-                <div id="wrap-product-bar">
+                <div id="wrap-product-bar" onMouseLeave={this.mouseLeave}>
                     <div id="logo-nike">
                         <a href="/home">
                             <svg className="pre-logo-svg" height="60px" width="60px" fill="#111" viewBox="0 0 69 32">
@@ -15,12 +73,12 @@ export default class ProductsBar extends React.Component{
                         </a>
                     </div>
                     <div id="list-products">
-                        <div>New Releases</div>
-                        <div>Men</div>
-                        <div>Women</div>
-                        <div>Kids</div>
-                        <div>Sale</div>
-                        <div>Gifts</div>
+                        <div onMouseEnter={()=>this.handleOpen("New Releases")}>New Releases</div>
+                        <div onMouseEnter={()=>this.handleOpen("Men")}>Men</div>
+                        <div onMouseEnter={()=>this.handleOpen("Women")}>Women</div>
+                        <div onMouseEnter={()=>this.handleOpen("Kids")}>Kids</div>
+                        <div onMouseEnter={()=>this.handleOpen("Sale")}>Sale</div>
+                        <div onMouseEnter={()=>this.handleOpen("Gifts")}>Gifts</div>
                     </div>
                     <div id="find-favorite-bag">
                         <div id="wrap-search">
@@ -46,6 +104,44 @@ export default class ProductsBar extends React.Component{
                             </a>
                         </div>
                     </div>
+                    {/* navigation shield */}
+                    {
+                        this.state.open && this.state.own==="New Releases" &&
+                        <div className="wrap-navigation-shield"  onMouseLeave={this.handleClose} style={this.state.display}>
+                            <NewReleases/>
+                        </div>
+                    }
+                    {
+                        this.state.open && this.state.own==="Men" &&
+                        <div className="wrap-navigation-shield"  onMouseLeave={this.handleClose} style={this.state.display}>
+                            <Men/>
+                        </div>
+                    }
+                    {
+                        this.state.open && this.state.own==="Women" &&
+                        <div className="wrap-navigation-shield"  onMouseLeave={this.handleClose} style={this.state.display}>
+                            <Women/>
+                        </div>
+                    }
+                    {
+                        this.state.open && this.state.own==="Kids" &&
+                        <div className="wrap-navigation-shield"  onMouseLeave={this.handleClose} style={this.state.display}>
+                            <Kids/>
+                        </div>
+                    }
+                    {
+                        this.state.open && this.state.own==="Sale" &&
+                        <div className="wrap-navigation-shield"  onMouseLeave={this.handleClose} style={this.state.display}>
+                            <Sale/>
+                        </div>
+                    }
+                    {
+                        this.state.open && this.state.own==="Gifts" &&
+                        <div className="wrap-navigation-shield"  onMouseLeave={this.handleClose} style={this.state.display}>
+                            <Gifts/>
+                        </div>
+                    }
+                    <div id="background-product-bar" style={this.state.backgroundStyle}></div>
                 </div>
             </>
         )

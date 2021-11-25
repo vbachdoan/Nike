@@ -4,7 +4,7 @@
     position: absolute;
     background-color: #00000075;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     z-index: 10;
     #wrap-sign-in-pop-up{
         position: relative;
@@ -116,6 +116,7 @@
             justify-content: center;
             border-radius: 3px;
             margin-bottom: 24px;
+            cursor: pointer;
             p{
                 margin: auto 0;
             }

@@ -1,0 +1,95 @@
+@import '../../../roots.scss';
+
+#wrap-register{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 84px;
+    #register-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 324px;
+        padding: 28px;
+        h3{
+            font-size: var(--size-title-big);
+            font-weight: 400;
+            margin-bottom: 26px;
+            margin-top: 32px;
+        }
+        p{
+            font-size: 14px;
+            color:#00000075;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        input{
+            height: 38px;
+            width: calc( 100% - 24px );
+            padding: 0px 12px;
+            margin-bottom: 24px;
+            border: .5px solid #00000075;
+            border-radius: 3px;
+            font-size: 14px;
+            &::placeholder{
+                color: #00000075;
+            }
+            &:focus{
+                outline: none;
+            }
+        }
+        #wrap-date-of-birth{
+            width: 100%;
+            position:relative;
+            input{
+                margin-bottom: 12px;
+                width: calc( 100% - 24px );
+                padding: 0px 12px;
+                color: #0000;
+                font-weight: 400;
+                transition: .1s ease-in-out;
+                &:focus{
+                    color: #00000075;
+                    ~ label{
+                        color: #0000;
+                    }
+                }
+            }
+            label{
+                height: 38px;
+                line-height: 38px;
+                color: #00000075;
+                position: absolute;
+                top: 0px;
+                left: 12px;
+                transition: .1s ease-in-out;
+            }
+        }
+        .sub-text{
+            font-size: 12px;
+            color: #00000075;
+        }
+        #wrap-input-list{
+            width: 100%;
+            position: relative;
+            #input-list{
+                pointer-events: none;
+                width: calc( 100% - 24px );
+                padding: 0px 12px;
+                color: #00000075;
+            }
+            #icon-arrow-down{
+                position: absolute;
+                color: #00000075;
+                top: 0px;
+                right: 12px;
+                height: 38px;
+                p{
+                    line-height: 38px;
+                    font-size: 16px;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}

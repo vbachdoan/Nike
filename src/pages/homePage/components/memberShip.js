@@ -1,6 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-import '../styles/memberShip.scss'
+import '../styles/memberShip.scss';
 
 export default class MemberShip extends React.Component{
     render(){
@@ -20,7 +21,7 @@ export default class MemberShip extends React.Component{
                             </p>
                         </div>
                         <div id="btn">
-                            <a href="/register">Join Us</a>
+                            <Link to="/register">Join Us</Link>
                         </div>
                     </div>
                 </div>
